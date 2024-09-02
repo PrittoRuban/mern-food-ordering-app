@@ -92,6 +92,12 @@ const HomePage = () => {
             variants={scaleUp}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           />
+          <motion.span variants={fadeInUp}>
+            For Queries and Support, contact us at{" "}
+            <a href="mailto:sample@gmail.com" target="_blank" className="text-blue-500">
+              sample@gmail.com
+            </a>
+          </motion.span>
         </motion.div>
       </motion.div>
     </motion.div>
