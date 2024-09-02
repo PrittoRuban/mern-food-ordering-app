@@ -10,7 +10,7 @@ import orderRoute from "./routes/OrderRoute";
 
 mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING as string, {
-    ssl: true, // Ensure SSL is enabled
+    ssl: true,
   })
   .then(() => console.log("Connected to database!"));
 
@@ -22,7 +22,13 @@ cloudinary.config({
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true, 
+};
+
+app.use(cors(corsOptions));
 
 app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
 
@@ -38,5 +44,5 @@ app.use("/api/restaurant", restaurantRoute);
 app.use("/api/order", orderRoute);
 
 app.listen(7000, () => {
-  console.log("server started on localhost:7000");
+  console.log("Server started on localhost:7000");
 });
