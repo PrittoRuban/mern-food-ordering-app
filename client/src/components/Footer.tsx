@@ -59,7 +59,6 @@ const Footer = () => {
         </div>
 
         {/* Social Media */}
-        
       </div>
 
       {/* Footer Bottom */}
@@ -68,7 +67,17 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} ReserveNow. All rights reserved.
         </p>
         <p className="text-sm">
-          Made with ❤️ by <a href="https://prittoruban.vercel.app/">Pritto Ruban</a> && <a href="https://in.linkedin.com/in/m-prasanna-kumar-jothi-b78653290">Prasanna Kumar</a>
+          Made with ❤️ by{" "}
+          <a href="https://prittoruban.vercel.app/" target="_blank">
+            Pritto Ruban
+          </a>{" "}
+          &&{" "}
+          <a
+            target="_blank"
+            href="https://in.linkedin.com/in/m-prasanna-kumar-jothi-b78653290"
+          >
+            Prasanna Kumar
+          </a>
         </p>
       </div>
     </footer>
