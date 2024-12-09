@@ -23,7 +23,7 @@ cloudinary.config({
 const app = express();
 
 const corsOptions = {
-  origin: "https://mern-food-ordering-app-eight.vercel.app",
+  origin: "https://reservenow.vercel.app",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, 
 };
